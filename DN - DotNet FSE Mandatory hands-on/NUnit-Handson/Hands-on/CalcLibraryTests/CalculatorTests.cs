@@ -1,0 +1,40 @@
+﻿using NUnit.Framework;
+using CalcLibrary;
+
+namespace CalcLibraryTests
+{
+    [TestFixture]
+    public class CalculatorTests
+    {
+        private Calculator calculator;
+
+        [SetUp]
+        public void Setup()
+        {
+            calculator = new Calculator();
+        }
+
+        [TearDown]
+        public void Cleanup()
+        {
+            calculator = null;
+        }
+
+        [TestCase(10, 20, 30)]
+        [TestCase(5, 5, 10)]
+        [TestCase(-5, 10, 5)]
+        [TestCase(0, 0, 0)]
+        public void TestAddition(int a, int b, int expected)
+        {
+            int actual = calculator.Add(a, b);
+
+            Assert.That(actual, Is.EqualTo(expected));
+        }
+
+        [Test]
+        [Ignore("Example Ignore Attribute")]
+        public void IgnoreTest()
+        {
+        }
+    }
+}

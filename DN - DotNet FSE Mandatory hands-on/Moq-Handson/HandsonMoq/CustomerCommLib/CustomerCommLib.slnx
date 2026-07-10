@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../CustomerComm.Tests/CustomerComm.Tests.csproj" />
+  <Project Path="../DirectoryExplorer.Tests/DirectoryExplorer.Tests.csproj" />
+  <Project Path="../MagicFilesLib/MagicFilesLib.csproj" />
+  <Project Path="CustomerCommLib.csproj" />
+</Solution>
